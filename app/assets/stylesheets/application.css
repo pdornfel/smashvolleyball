@@ -15,3 +15,33 @@
  *= require foundation_and_overrides
 
  */
+
+ html {
+  background-color: #eee;
+  padding-bottom: 80px;
+  width: 100%;
+  }
+
+  body {
+    background-color: #eee;
+  }
+
+  .form {
+    background-color: #eee;
+  }
+
+ .header {
+  margin-top: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #eee;
+ }
+
+ #new_player {
+  margin-top: 30px;
+  margin-left: 20%;
+  margin-right: 20%;
+ }
+
+
+

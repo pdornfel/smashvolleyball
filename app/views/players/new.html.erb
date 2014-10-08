@@ -1,0 +1,28 @@
+<h1 class='header'>SMASH BOYS VOLLEYBALL SIGNUP</h1>
+
+<div class='form'>
+    <%= simple_form_for @player do |f| %>
+      
+      <%= f.input :first_name %>
+
+      <%= f.input :last_name %>
+
+      <%= f.input :dob, as: :date, start_year: Date.today.year - 34,
+                                  end_year: Date.today.year, include_blank: true,
+                                  order: [:month, :day, :year], label: "Birthdate" %>
+
+      <%= f.input :current_grade, collection: @grades %>
+
+      <%= f.input :height, collection: @heights %>
+
+      <%= f.input :weight %>
+
+      <%= f.input :dominant_hand, collection: ["Left", "Right", "Both"] %>
+
+      <%= f.input :school %>
+
+      <%= f.button :submit %>
+
+    <% end %>
+</div>
+
