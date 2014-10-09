@@ -1,0 +1,28 @@
+<br>
+<h2>SMASH BOYS ALL PLAYERS</h2>
+<br>
+<table>
+  <tr>
+    <th>First Name</th>
+    <th>Last Name</th>
+    <th>Date of Birth</th>
+    <th>Current Grade</th>
+    <th>Height</th>
+    <th>Weight</th>
+    <th>Dominant Hand</th>
+    <th>School</th>
+  </tr>
+  <% @players.each do |player| %>
+  <tr>
+    <td><%= player.first_name %></td>
+    <td><%= player.last_name %></td>
+    <td><%= player.dob %></td>
+    <td><%= player.current_grade %></td>
+    <td><%= player.height %></td>
+    <td><%= player.weight %></td>
+    <td><%= player.dominant_hand %></td>
+    <td><%= player.school %></td>
+  </tr>
+  <% end %>
+</table>
+

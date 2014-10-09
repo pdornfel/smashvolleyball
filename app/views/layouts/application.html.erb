@@ -22,6 +22,15 @@
       <% end %>
     <% end %>
 
+
+    <% if current_user %>
+      <br>
+          Logged in as <%= current_user.email %>
+      <br>
+      <br>
+      <%= link_to "Signout", logout_path %>
+    <% end %>
+
     <%= yield %>
     <%= javascript_include_tag "application" %>
   </body>

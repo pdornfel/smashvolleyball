@@ -1,11 +1,13 @@
+<h3><%= link_to "Login", login_path %></h3>
+
 <h1 class='header'>SMASH BOYS VOLLEYBALL SIGNUP</h1>
 
 <div class='form'>
     <%= simple_form_for @player do |f| %>
       
-      <%= f.input :first_name %>
+      <%= f.input :first_name, required: true %>
 
-      <%= f.input :last_name %>
+      <%= f.input :last_name, required: true %>
 
       <%= f.input :dob, as: :date, start_year: Date.today.year - 34,
                                   end_year: Date.today.year, include_blank: true,
@@ -13,7 +15,7 @@
 
       <%= f.input :current_grade, collection: @grades %>
 
-      <%= f.input :height, collection: @heights %>
+      <%= f.input :height, collection: @heights.map! {|n| number_with_precision(n, precision: 2) } %>
 
       <%= f.input :weight %>
 

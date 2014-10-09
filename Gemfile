@@ -29,11 +29,13 @@ gem 'spring',        group: :development
 # EXTRAS
 gem 'foundation-rails'
 gem 'simple_form'
+gem 'sorcery'
 
 gem 'rails_12factor', group: :production
 
 group :development, :test do 
   gem 'pry-rails'
+  gem 'quiet_assets'
 end
 
 # Use ActiveModel has_secure_password
