@@ -30,6 +30,7 @@ gem 'spring',        group: :development
 gem 'foundation-rails'
 gem 'simple_form'
 gem 'sorcery'
+gem 'ransack'
 
 gem 'rails_12factor', group: :production
 
