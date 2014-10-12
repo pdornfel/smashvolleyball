@@ -25,8 +25,8 @@
         <th>Last Name</th>
         <th><%= sort_link @search, :dob, "Date of Birth" %></th>
         <th><%= sort_link @search, :current_grade, "Current Grade" %></th>
-        <th><%= sort_link @search, :height, "Height" %></th>
-        <th><%= sort_link @search, :weight, "Weight" %></th>
+        <th><%= sort_link @search, :height_inches, "Height in Inches" %></th>
+        <th><%= sort_link @search, :height, 'Height in Feet' %></th>
         <th><%= sort_link @search, :dominant_hand, "Dominant Hand"%></th>
         <th><%= sort_link @search, :school, "School" %></th>
       </tr>
@@ -36,10 +36,11 @@
         <td><%= player.last_name %></td>
         <td><%= player.dob %></td>
         <td><%= player.current_grade %></td>
+        <td><%= player.height_inches %></td>
         <td><%= player.height %></td>
-        <td><%= player.weight %></td>
         <td><%= player.dominant_hand %></td>
         <td><%= player.school %></td>
+        <td><%= link_to "edit", player_path(player)%></td>
       </tr>
       <% end %>
     </table>

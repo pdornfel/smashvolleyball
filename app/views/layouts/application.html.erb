@@ -24,11 +24,12 @@
 
 
     <% if current_user %>
-      <br>
-          Logged in as <%= current_user.email %>
-      <br>
-      <br>
-      <%= link_to "Signout", logout_path %>
+        <h4>Logged in as <%= current_user.email %></h4>
+        <h5><%= link_to "Signout", logout_path %></h5>
+        <h5><%= link_to "Admin Panel", admin_path %></h5>
+        <h5><%= link_to "Form", new_player_path %></h5>
+    <% else %>
+        <h3><%= link_to "Login", login_path %></h3>
     <% end %>
 
     <%= yield %>
